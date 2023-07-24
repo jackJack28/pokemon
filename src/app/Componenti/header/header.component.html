@@ -1,0 +1,48 @@
+<!--<p>header works!</p>-->
+
+<div style="background-color: aqua;">
+    <div style="padding-left: 40px; display: block;">
+        <a routerLink="">
+            <img src="../../../assets/Pokémon_logo_extended.png" alt="pokemon logo" width="150px">
+        </a>
+    </div>
+    <!--<div style="margin-left: 620px;">-->
+        <!--<label class="label" for="input">Pokémon</label>-->
+<!--L'input di prima-->
+        <!--<input style="width: 200px; height: 30px;" type="text" placeholder="Nome o numero del Pokémon" (input)="onInput($event)">
+        <div style="display: none; background-color: gray;" id="input">{{"e"}}</div>
+        <button style="height: 35px;">Cerca</button>
+        <pre style="font-family: Arial, Helvetica Neue, sans-serif;">Usa la ricerca avanzata per trovare Pokémon
+in base al tipo, alla debolezza, all'abilità
+e altro ancora !</pre>
+    </div>
+</div>-->
+
+<!--Ricerca avanzata-->
+<!--<div style="background-color: rgb(144, 143, 143); position: relative; left: 600px; bottom: 15px; width: 300px; margin-bottom: 20px;">
+    <div style="display: flex; align-items: center; margin-left: 60px;">
+        <span style="font-weight: 420; font-size: medium;">Ricerca avanzata</span><br>
+        <span style="margin-left: 20px; margin-top: 2px; padding-top: 2px;" onclick="">
+            <img src="../../../assets/search_icon.png" alt="search icon button" width="40px">
+        </span>
+    </div>
+</div>-->
+<div style="margin-left: 580px;">
+    <form class="example-form">
+        <mat-form-field class="example-full-width">
+        <mat-label>Nome Pokémon</mat-label>
+        <input type="text"
+                placeholder="Inserisci qui il nome del Pokémon"
+                aria-label="Inserisci qui il nome del Pokémon"
+                matInput
+                [formControl]="myControl"
+                [matAutocomplete]="auto">
+        <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+            <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+            {{option}}
+            </mat-option>
+        </mat-autocomplete>
+        </mat-form-field>
+    </form>
+</div>
+  

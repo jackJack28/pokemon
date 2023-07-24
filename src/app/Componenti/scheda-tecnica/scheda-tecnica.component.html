@@ -1,0 +1,254 @@
+<!--<p>scheda-tecnica works!</p>-->
+
+
+<div *ngIf="pokemon"> <!--Se inizializza la variabile che arriva da TS renderizza, altrimenti no. In buona sostanza, quello che accade è che se non trova corrispondenza, non viene mostrato il componente. Se questo non ci fosse, il componente apparirebbe ma senza il contenuto e l'errore in console-->
+
+<mat-card class="example-card" style="margin: 25px 255px;">
+  <div style="position: relative; bottom: 45px;">
+    <div style="position: relative;">
+        <div style="position: absolute;">
+            <img [src]="pokemon.foto" alt="Pokémon photo" width="255px">
+        </div>
+        <mat-card-header style="position: relative; top: 220px;">
+            <mat-card-title style="position: absolute; left: 445px; bottom: 160px; font-size: 32px;">{{pokemon.nome}}</mat-card-title>
+            <div style="position: absolute; left: 870px; bottom: 160px;">
+                <span style="padding: 0px 10px; margin-right: 10px; font-size: 32px; color: gray;">{{pokemon.numero}}</span>
+            </div>
+            <div style="max-width: 600px;">
+                <p style="position: relative; left: 320px; bottom: 50px; font-size: medium;">{{pokemon.descrizione}}</p>
+            </div>
+        </mat-card-header>
+    </div>
+    
+    
+    <div style="display: flex; margin-top: 250px;">
+        
+        <div class="content-sx" style="height: 500px; width: 500px; flex-basis: 50%;">
+         <div>
+            <h3 style="position: relative; top: 15px; margin-bottom: 15px; margin-left: 30px;">PS</h3>
+            <div style="display: flex; margin-left: 25px; align-items: center;">
+                <div style="display: flex;">
+                    <div style="width: 20px; height: 20px; border-radius: 50%; background-color: green; margin: 0px 3px;" *ngIf="x ;else templateName"></div>
+                    <ng-template #templateName>
+                        <div style="width: 20px; height: 20px; border-radius: 50%; background-color: gray; margin: 0px 3px;"></div>
+                    </ng-template>
+                    <div style="width: 20px; height: 20px; border-radius: 50%; background-color: gray; margin: 0px 3px;"></div>
+                    <div style="width: 20px; height: 20px; border-radius: 50%; background-color: gray; margin: 0px 3px;"></div>
+                    <div style="width: 20px; height: 20px; border-radius: 50%; background-color: gray; margin: 0px 3px;"></div>
+                    <div style="width: 20px; height: 20px; border-radius: 50%; background-color: gray; margin: 0px 3px;"></div>
+                    <div style="width: 20px; height: 20px; border-radius: 50%; background-color: gray; margin: 0px 3px;"></div>
+                    <div style="width: 20px; height: 20px; border-radius: 50%; background-color: gray; margin: 0px 3px;"></div>
+                    <div style="width: 20px; height: 20px; border-radius: 50%; background-color: gray; margin: 0px 3px;"></div>
+                    <div style="width: 20px; height: 20px; border-radius: 50%; background-color: gray; margin: 0px 3px;"></div>
+                    <div style="width: 20px; height: 20px; border-radius: 50%; background-color: gray; margin: 0px 3px;"></div>
+                </div>
+                <p style="position: relative; left: 180px; top: 5px; font-size: medium;">{{pokemon.abilita[0].punteggioAbilita}}</p>
+            </div>
+         </div>
+
+         <div>
+            <h3 style="position: relative; top: 15px; margin-bottom: 15px; margin-left: 30px;">Attacco</h3>
+            <div style="display: flex; margin-left: 25px; align-items: center;">
+                <div style="display: flex;">
+                    <div style="width: 20px; height: 20px; border-radius: 50%; background-color: gray; margin: 0px 3px;"></div>
+                    <div style="width: 20px; height: 20px; border-radius: 50%; background-color: gray; margin: 0px 3px;"></div>
+                    <div style="width: 20px; height: 20px; border-radius: 50%; background-color: gray; margin: 0px 3px;"></div>
+                    <div style="width: 20px; height: 20px; border-radius: 50%; background-color: gray; margin: 0px 3px;"></div>
+                    <div style="width: 20px; height: 20px; border-radius: 50%; background-color: gray; margin: 0px 3px;"></div>
+                    <div style="width: 20px; height: 20px; border-radius: 50%; background-color: gray; margin: 0px 3px;"></div>
+                    <div style="width: 20px; height: 20px; border-radius: 50%; background-color: gray; margin: 0px 3px;"></div>
+                    <div style="width: 20px; height: 20px; border-radius: 50%; background-color: gray; margin: 0px 3px;"></div>
+                    <div style="width: 20px; height: 20px; border-radius: 50%; background-color: gray; margin: 0px 3px;"></div>
+                    <div style="width: 20px; height: 20px; border-radius: 50%; background-color: gray; margin: 0px 3px;"></div>
+                </div>
+                <p style="position: relative; left: 180px; top: 5px; font-size: medium;">{{pokemon.abilita[1].punteggioAbilita}}</p>
+            </div>
+         </div>
+
+         <div>
+            <h3 style="position: relative; top: 15px; margin-bottom: 15px; margin-left: 30px;">Difesa</h3>
+            <div style="display: flex; margin-left: 25px; align-items: center;">
+                <div style="display: flex;">
+                    <div style="width: 20px; height: 20px; border-radius: 50%; background-color: gray; margin: 0px 3px;"></div>
+                    <div style="width: 20px; height: 20px; border-radius: 50%; background-color: gray; margin: 0px 3px;"></div>
+                    <div style="width: 20px; height: 20px; border-radius: 50%; background-color: gray; margin: 0px 3px;"></div>
+                    <div style="width: 20px; height: 20px; border-radius: 50%; background-color: gray; margin: 0px 3px;"></div>
+                    <div style="width: 20px; height: 20px; border-radius: 50%; background-color: gray; margin: 0px 3px;"></div>
+                    <div style="width: 20px; height: 20px; border-radius: 50%; background-color: gray; margin: 0px 3px;"></div>
+                    <div style="width: 20px; height: 20px; border-radius: 50%; background-color: gray; margin: 0px 3px;"></div>
+                    <div style="width: 20px; height: 20px; border-radius: 50%; background-color: gray; margin: 0px 3px;"></div>
+                    <div style="width: 20px; height: 20px; border-radius: 50%; background-color: gray; margin: 0px 3px;"></div>
+                    <div style="width: 20px; height: 20px; border-radius: 50%; background-color: gray; margin: 0px 3px;"></div>
+                </div>
+                <p style="position: relative; left: 180px; top: 5px; font-size: medium;">{{pokemon.abilita[2].punteggioAbilita}}</p>
+            </div>
+         </div>
+
+         <div>
+            <h3 style="position: relative; top: 15px; margin-bottom: 15px; margin-left: 30px;">Attacco Speciale</h3>
+            <div style="display: flex; margin-left: 25px; align-items: center;">
+                <div style="display: flex;">
+                    <div style="width: 20px; height: 20px; border-radius: 50%; background-color: gray; margin: 0px 3px;"></div>
+                    <div style="width: 20px; height: 20px; border-radius: 50%; background-color: gray; margin: 0px 3px;"></div>
+                    <div style="width: 20px; height: 20px; border-radius: 50%; background-color: gray; margin: 0px 3px;"></div>
+                    <div style="width: 20px; height: 20px; border-radius: 50%; background-color: gray; margin: 0px 3px;"></div>
+                    <div style="width: 20px; height: 20px; border-radius: 50%; background-color: gray; margin: 0px 3px;"></div>
+                    <div style="width: 20px; height: 20px; border-radius: 50%; background-color: gray; margin: 0px 3px;"></div>
+                    <div style="width: 20px; height: 20px; border-radius: 50%; background-color: gray; margin: 0px 3px;"></div>
+                    <div style="width: 20px; height: 20px; border-radius: 50%; background-color: gray; margin: 0px 3px;"></div>
+                    <div style="width: 20px; height: 20px; border-radius: 50%; background-color: gray; margin: 0px 3px;"></div>
+                    <div style="width: 20px; height: 20px; border-radius: 50%; background-color: gray; margin: 0px 3px;"></div>
+                </div>
+                <p style="position: relative; left: 180px; top: 5px; font-size: medium;">{{pokemon.abilita[3].punteggioAbilita}}</p>
+            </div>
+         </div>
+
+         <div>
+            <h3 style="position: relative; top: 15px; margin-bottom: 15px; margin-left: 30px;">Difesa Speciale</h3>
+            <div style="display: flex; margin-left: 25px; align-items: center;">
+                <div style="display: flex;">
+                    <div style="width: 20px; height: 20px; border-radius: 50%; background-color: gray; margin: 0px 3px;"></div>
+                    <div style="width: 20px; height: 20px; border-radius: 50%; background-color: gray; margin: 0px 3px;"></div>
+                    <div style="width: 20px; height: 20px; border-radius: 50%; background-color: gray; margin: 0px 3px;"></div>
+                    <div style="width: 20px; height: 20px; border-radius: 50%; background-color: gray; margin: 0px 3px;"></div>
+                    <div style="width: 20px; height: 20px; border-radius: 50%; background-color: gray; margin: 0px 3px;"></div>
+                    <div style="width: 20px; height: 20px; border-radius: 50%; background-color: gray; margin: 0px 3px;"></div>
+                    <div style="width: 20px; height: 20px; border-radius: 50%; background-color: gray; margin: 0px 3px;"></div>
+                    <div style="width: 20px; height: 20px; border-radius: 50%; background-color: gray; margin: 0px 3px;"></div>
+                    <div style="width: 20px; height: 20px; border-radius: 50%; background-color: gray; margin: 0px 3px;"></div>
+                    <div style="width: 20px; height: 20px; border-radius: 50%; background-color: gray; margin: 0px 3px;"></div>
+                </div>
+                <p style="position: relative; left: 180px; top: 5px; font-size: medium;">{{pokemon.abilita[4].punteggioAbilita}}</p>
+            </div>
+         </div>
+
+         <div>
+            <h3 style="position: relative; top: 15px; margin-bottom: 15px; margin-left: 30px;">Velocità</h3>
+            <div style="display: flex; margin-left: 25px; align-items: center;">
+                <div style="display: flex;"> 
+                    <!--<div class="cerchioVuoto" [ngClass]="{'cerchioPieno': pokemon.pokemon[this.numero].abilita[5].punteggioAbilita == pokemon.pokemon[this.numero].abilita[5].punteggioAbilita}"></div>-->
+                    <div style="width: 20px; height: 20px; border-radius: 50%; background-color: gray; margin: 0px 3px;"></div>
+                    <div style="width: 20px; height: 20px; border-radius: 50%; background-color: gray; margin: 0px 3px;"></div>
+                    <div style="width: 20px; height: 20px; border-radius: 50%; background-color: gray; margin: 0px 3px;"></div>
+                    <div style="width: 20px; height: 20px; border-radius: 50%; background-color: gray; margin: 0px 3px;"></div>
+                    <div style="width: 20px; height: 20px; border-radius: 50%; background-color: gray; margin: 0px 3px;"></div>
+                    <div style="width: 20px; height: 20px; border-radius: 50%; background-color: gray; margin: 0px 3px;"></div>
+                    <div style="width: 20px; height: 20px; border-radius: 50%; background-color: gray; margin: 0px 3px;"></div>
+                    <div style="width: 20px; height: 20px; border-radius: 50%; background-color: gray; margin: 0px 3px;"></div>
+                    <div style="width: 20px; height: 20px; border-radius: 50%; background-color: gray; margin: 0px 3px;"></div>
+                    <div style="width: 20px; height: 20px; border-radius: 50%; background-color: gray; margin: 0px 3px;"></div>
+                </div>
+                <p style="position: relative; left: 180px; top: 5px; font-size: medium;">{{pokemon.abilita[5].punteggioAbilita}}</p>
+            </div>
+         </div>
+
+        </div>
+
+        <hr style="width: 0.2px; size: 400; border-radius: 40px; background: rgb(228, 224, 224); padding: 1px; opacity: 0.75; position: relative; left: 8px;">
+
+        <div class="content-dx" style="flex-basis: 50%; margin-left: 20px;">
+            <div style="display: flex; margin-left: 50px; margin-bottom: 40px; margin-top: 20px;">
+
+                <div style="flex-basis: 50%;">
+                    <h3 style="position: relative; top: 15px;">Altezza</h3>
+                    <mat-card-subtitle>{{pokemon.altezza}} m</mat-card-subtitle>
+                </div>
+
+                <div style="flex-basis: 50%;">
+                    <h3 style="position: relative; top: 15px;">Peso</h3>
+                    <mat-card-subtitle>{{pokemon.peso}} Kg</mat-card-subtitle>
+                </div>
+
+            </div>
+
+            <div style="display: flex; margin-left: 50px; margin-bottom: 40px;">
+
+                <div style="flex-basis: 50%;">
+                    <h3 style="position: relative; top: 15px;">Categoria</h3>
+                    <mat-card-subtitle>{{pokemon.categoria}}</mat-card-subtitle>
+                </div>
+
+                <div style="flex-basis: 50%;">
+                    <h3 style="position: relative; top: 15px;">Tipo</h3>
+                    <mat-card-subtitle>{{pokemon.tipo[0]}} &nbsp; {{pokemon.tipo[1]}}</mat-card-subtitle>
+                </div>
+
+            </div>
+
+            <div style="display: flex; margin-left: 50px;">
+
+                <div style="flex-basis: 50%;">
+                    <h3 style="position: relative; top: 15px;">Abilità Speciale</h3>
+                    <mat-card-subtitle>{{pokemon.abilitaSpeciale}}</mat-card-subtitle>
+                </div>
+
+                <div style="flex-basis: 50%;">
+                    <h3 style="position: relative; top: 15px;">Debolezze</h3>
+
+                    <div style="display: flex; flex-wrap: wrap;">
+                        <div style="flex-basis: 50%; padding-bottom: 5px; display: flex;">
+                            <mat-card-subtitle style="margin-right: 30px;">{{pokemon.debolezze[0]}}</mat-card-subtitle>
+                            <mat-card-subtitle>{{pokemon.debolezze[1]}}</mat-card-subtitle>
+                        </div>
+                        <div style="flex-basis: 50%; display: flex;">
+                            <mat-card-subtitle style="margin-right: 20px;">{{pokemon.debolezze[2]}}</mat-card-subtitle>
+                            <mat-card-subtitle>{{pokemon.debolezze[3]}}</mat-card-subtitle>
+                        </div>
+                    </div>
+                    
+                </div>
+
+            </div>
+        </div>
+     </div>
+    </div>
+
+    <h2 style="padding-bottom: 12px; margin-left: 30px; font-size: 22px;">Evoluzioni</h2>
+    <div style="display: flex; padding-left: 40px; margin-bottom: 35px;">
+        
+        <div style="flex-basis: 20%;">
+            <img [src]="pokemon.evoluzioni[0].foto" alt="" width="120px">
+            <div style="padding-top: 11px;">
+                <div style="display: flex;">
+                    <span style="flex-basis: 50%; font-weight: bold; font-size: 16px;">{{pokemon.evoluzioni[0].nome}}</span> &nbsp;
+                    <mat-card-subtitle style="flex-basis: 50%;">N° {{pokemon.evoluzioni[0].numero}}</mat-card-subtitle>
+                </div>
+                <span>{{pokemon.evoluzioni[0].tipo[0]}} &nbsp; {{pokemon.evoluzioni[0].tipo[1]}}</span>
+            </div>
+            
+        </div>
+
+        <div style="flex-basis: 20%; margin-top: 25px; margin-left: 60px;">
+            <img src="../../../assets/double-arrow-right-icon.png" alt="" width="70px">
+        </div>
+
+        <div style="flex-basis: 20%;">
+            <img [src]="pokemon.evoluzioni[1].foto" alt="" width="120px">
+            <div style="padding-top: 10px;">
+                <div style="display: flex;">
+                    <span style="flex-basis: 50%; font-weight: bold; font-size: 16px;">{{pokemon.evoluzioni[1].nome}}</span> &nbsp;
+                    <mat-card-subtitle style="flex-basis: 50%;">N° {{pokemon.evoluzioni[1].numero}}</mat-card-subtitle>
+                </div>
+                <span>{{pokemon.evoluzioni[1].tipo[0]}} &nbsp; {{pokemon.evoluzioni[1].tipo[1]}}</span>
+            </div>
+
+        </div>
+
+        <div style="flex-basis: 20%; margin-top: 25px; margin-left: 70px;">
+            <img src="../../../assets/double-arrow-right-icon.png" alt="" width="70px">
+        </div>
+
+        <div style="flex-basis: 20%; margin-right: 40px;">
+            <img [src]="pokemon.evoluzioni[2].foto" alt="" width="120px">
+            <div style="padding-top: 2px;">
+                <div style="display: flex;">
+                    <span style="flex-basis: 50%; font-weight: bold; font-size: 16px;">{{pokemon.evoluzioni[2].nome}}</span>
+                    <mat-card-subtitle style="flex-basis: 50%;">N° {{pokemon.evoluzioni[2].numero}}</mat-card-subtitle>
+                </div>
+                <span>{{pokemon.evoluzioni[2].tipo[0]}} &nbsp; {{pokemon.evoluzioni[2].tipo[1]}}</span>
+            </div>
+        </div>
+            
+    </div>
+  </mat-card>
+</div>

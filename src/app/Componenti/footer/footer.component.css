@@ -1,0 +1,10 @@
+.footer{
+    background-color: rgb(144, 143, 143);
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding-left: 55px;
+};

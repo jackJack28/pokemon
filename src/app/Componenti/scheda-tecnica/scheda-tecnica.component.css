@@ -1,0 +1,24 @@
+.example-card{
+    /*max-width: 400px;*/
+    width: 1000px;
+    /*height: 1060px;*/
+    max-height: 2500px;
+    /*background-color: rgba(236, 236, 240, 0.956);*/
+    box-shadow: 8px 8px #9eb0b67e;
+};
+
+.cerchioVuoto{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 0px 3px;
+    background-color: gray;
+}
+
+.cerchioPieno{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 0px 3px;
+    background-color: green;
+}
